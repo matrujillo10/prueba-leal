@@ -25,7 +25,7 @@ Todas las aplicaciones son híbridas, por lo que cada una contiene un micro serv
 
 Para probar utilicé postman e hice una colección con los ejemplos que muestro acá. La agregué al repositorio por si puede llegar a ser útil.
 
-[Colleción de Postman]()
+[Colleción de Postman](https://raw.githubusercontent.com/matrujillo10/prueba-leal/master/LealPrueba.postman_collection.json)
 
 ### Registro de usuario
 
