@@ -1,0 +1,209 @@
+{
+	"info": {
+		"_postman_id": "6e4bf60c-5645-4156-84f4-a08f020b7655",
+		"name": "LealPrueba",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Registro de usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"John\",\n\t\"lastName\": \"Doe\",\n\t\"birth_date\": \"1998-04-03\",\n\t\"email\": \"john.doe@domain.com\",\n\t\"password\": \"secure-password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"register"
+					]
+				},
+				"description": "Registra un usuario"
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"john.doe@domain.com\",\n\t\"password\": \"secure-password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Creation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/miller/Desktop/leal-prueba/transactions.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3002/transaction/creation",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"transaction",
+						"creation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Inactivation",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3003/transaction/inactivation/22",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"transaction",
+						"inactivation",
+						"22"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Historical",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJfaWQiOiI1YjllMTZmMWE2NGQzM2UyZjdhYmYyZmNlMjRlOWI4NyIsImNyZWF0ZWRfZGF0ZSI6IjIwMjAtMDYtMjVUMTQ6NDc6MTEuMDAwWiIsIm5hbWUiOiJKb2huIiwibGFzdE5hbWUiOiJEb2UiLCJiaXJ0aF9kYXRlIjoiMTk5OC0wNC0wMlQwNTowMDowMC4wMDBaIiwiZW1haWwiOiJqb2huLmRvZUBkb21haW4uY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkUDdHM2RSZkhDSHE0M0RXY1lVdlg1ZUlEQ2FITEVEOURSdmNhTUlwLy85ZUVoNUduQnlycTYifSwic3ViIjoiNWI5ZTE2ZjFhNjRkMzNlMmY3YWJmMmZjZTI0ZTliODciLCJpYXQiOjE1OTMwOTgwMzMsImV4cCI6MTU5MzcwMjgzM30.uQESQxY-ua9qyLCl6GgfTYQtGkbVgGbgqxoK7I9PF3w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3004/transaction/historical",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3004",
+					"path": [
+						"transaction",
+						"historical"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Points",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJfaWQiOiI1YjllMTZmMWE2NGQzM2UyZjdhYmYyZmNlMjRlOWI4NyIsImNyZWF0ZWRfZGF0ZSI6IjIwMjAtMDYtMjVUMTQ6NDc6MTEuMDAwWiIsIm5hbWUiOiJKb2huIiwibGFzdE5hbWUiOiJEb2UiLCJiaXJ0aF9kYXRlIjoiMTk5OC0wNC0wMlQwNTowMDowMC4wMDBaIiwiZW1haWwiOiJqb2huLmRvZUBkb21haW4uY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkUDdHM2RSZkhDSHE0M0RXY1lVdlg1ZUlEQ2FITEVEOURSdmNhTUlwLy85ZUVoNUduQnlycTYifSwic3ViIjoiNWI5ZTE2ZjFhNjRkMzNlMmY3YWJmMmZjZTI0ZTliODciLCJpYXQiOjE1OTMwOTgwMzMsImV4cCI6MTU5MzcwMjgzM30.uQESQxY-ua9qyLCl6GgfTYQtGkbVgGbgqxoK7I9PF3w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3005/transaction/points",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						"transaction",
+						"points"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Export",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJfaWQiOiI1YjllMTZmMWE2NGQzM2UyZjdhYmYyZmNlMjRlOWI4NyIsImNyZWF0ZWRfZGF0ZSI6IjIwMjAtMDYtMjVUMTQ6NDc6MTEuMDAwWiIsIm5hbWUiOiJKb2huIiwibGFzdE5hbWUiOiJEb2UiLCJiaXJ0aF9kYXRlIjoiMTk5OC0wNC0wMlQwNTowMDowMC4wMDBaIiwiZW1haWwiOiJqb2huLmRvZUBkb21haW4uY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkUDdHM2RSZkhDSHE0M0RXY1lVdlg1ZUlEQ2FITEVEOURSdmNhTUlwLy85ZUVoNUduQnlycTYifSwic3ViIjoiNWI5ZTE2ZjFhNjRkMzNlMmY3YWJmMmZjZTI0ZTliODciLCJpYXQiOjE1OTMwOTgwMzMsImV4cCI6MTU5MzcwMjgzM30.uQESQxY-ua9qyLCl6GgfTYQtGkbVgGbgqxoK7I9PF3w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3006/transaction/export",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3006",
+					"path": [
+						"transaction",
+						"export"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

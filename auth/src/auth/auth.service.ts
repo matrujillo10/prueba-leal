@@ -50,7 +50,6 @@ export class AuthService {
   }
 
   getPayload(jwt: string) {
-    this.jwtService.decode(jwt);
     return this.jwtService.verify(jwt);
   }
 }

@@ -1,7 +1,7 @@
 import { Entity, Column, PrimaryColumn, CreateDateColumn, BeforeInsert } from 'typeorm';
 import { createHash } from 'crypto';
 import { hash } from 'bcrypt';
-import { IsEmail, Min } from 'class-validator';
+import { IsEmail, Min, Length } from 'class-validator';
 import { UserInterface } from './user.interface';
 
 @Entity({name: 'USER'})
@@ -13,9 +13,11 @@ export class User implements UserInterface {
   created_date: Date;
 
   @Column()
+  @Length(1, 100)
   name: string;
 
   @Column()
+  @Length(1, 100)
   lastName: string;
 
   @Column()
@@ -23,6 +25,7 @@ export class User implements UserInterface {
 
   @Column()
   @IsEmail()
+  @Length(1, 100)
   email: string;
 
   @Column()

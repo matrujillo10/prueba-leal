@@ -16,7 +16,7 @@ import constants from './constants';
     }
   }]), JwtModule.register({
     secret: constants.jwtSecret,
-    signOptions: { expiresIn: '60s' }
+    signOptions: { expiresIn: "7 days" }
   })],
   controllers: [AuthController],
   providers: [AuthService, LocalStrategy]

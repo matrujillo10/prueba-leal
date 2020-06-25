@@ -1,5 +1,5 @@
 import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, BeforeInsert } from 'typeorm';
-import { Length, IsInt } from 'class-validator';
+import { Length, IsInt, Max, Min } from 'class-validator';
 import { TransactionInterface } from './transaction.interface';
 
 @Entity({name: 'TRANSACTION'})
@@ -18,6 +18,8 @@ export class Transaction implements TransactionInterface {
   points: number;
 
   @Column()
+  @Max(1)
+  @Min(0)
   status: number;
 
   @Column()
