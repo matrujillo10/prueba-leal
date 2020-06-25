@@ -73,6 +73,9 @@ Para este servicio es necesario agregar el encabezado de autorización `Authoriz
 
 Para este servicio es necesario agregar el encabezado de autorización `Authorization` con el valor `Bearer ` concatenado al token que devuelve el servicio de inicio de sesión.
 
+La respuesta de este servicio es un binario, por tanto, para obtener el archivo se requiere guardar la respuesta desde el cliente.
+
+
 ### Crear Transacción
 
 > POST http://localhost:3002/transaction/creation
