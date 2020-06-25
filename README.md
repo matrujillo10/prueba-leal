@@ -23,6 +23,10 @@ $ npm run start:prod
 
 Todas las aplicaciones son híbridas, por lo que cada una contiene un micro servicio y una API HTTP que permite interactuar a un cliente con el microseervicio. Por tanto, se puede utilizar un cliente HTTP siguiendo las siguientes especificaciones:
 
+Para probar utilicé postman e hice una colección con los ejemplos que muestro acá. La agregué al repositorio por si puede llegar a ser útil.
+
+[Colleción de Postman]()
+
 ### Registro de usuario
 
 > POST http://localhost:3000/user/register
@@ -48,7 +52,7 @@ Todas las aplicaciones son híbridas, por lo que cada una contiene un micro serv
 }
 ```
 
-Este servicio devuelve un token que será necesario para otros servicios. Para el propostito de probar, el token tiene una validez de un poco más que 6 días.
+Este servicio devuelve un token que será necesario para otros servicios. Para el propostito de probar, el token tiene una validez de 7 días.
 
 ### Historial de transacciones
 
